@@ -37,4 +37,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKERHUB.USERNAME }}/netbox-hosts-configmap-for-coredns:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/netbox-hosts-configmap-for-coredns:latest
