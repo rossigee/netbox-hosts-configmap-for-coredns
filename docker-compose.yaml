@@ -1,0 +1,13 @@
+version: '3'
+services:
+  microservice:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: rossigee/netbox-hosts-configmap-for-coredns:latest
+    environment:
+      - NETBOX_API_URL=${NETBOX_API_URL}
+      - NETBOX_API_TOKEN=${NETBOX_API_TOKEN}
+      - K8S_NAMESPACE=${K8S_NAMESPACE}
+      - K8S_CONFIGMAP=${K8S_CONFIGMAP}
+
